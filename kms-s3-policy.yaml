@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:GenerateDataKey"
+            ],
+            "Resource": [
+                "arn:aws:s3:::kms-demo-bucket-encryption/*",
+                "arn:aws:kms:ap-southeast-2:253722483539:key/e44d1d6f-b242-4f5a-a02f-285957fe2f17"
+            ]
+        }
+    ]
+}
